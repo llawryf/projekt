@@ -40,9 +40,10 @@ public class RegisterPanel {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Newdfhe");
+		JButton btnNewButton = new JButton("BlaBla");
 		btnNewButton.setBounds(164, 109, 89, 23);
 		frame.getContentPane().add(btnNewButton);
+		
 	}
 
 }
