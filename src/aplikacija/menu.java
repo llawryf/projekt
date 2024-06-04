@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.Color;
 
 public class menu {
 
@@ -65,16 +66,19 @@ public class menu {
 	
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(102, 255, 0));
 		frame.setBounds(100, 100, 854, 599);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Dobrodosli!");
+		lblNewLabel.setForeground(new Color(255, 0, 255));
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNewLabel.setBounds(10, 11, 140, 25);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JButton btnDrugiKorisnici = new JButton("Lista korisnika");
+		btnDrugiKorisnici.setForeground(new Color(255, 0, 255));
 		btnDrugiKorisnici.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				korisniciIspis dlgKi = new korisniciIspis();
@@ -91,6 +95,7 @@ public class menu {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JButton btnRecepti = new JButton("Recepti");
+		btnRecepti.setForeground(new Color(255, 0, 255));
 		btnRecepti.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				recepti dlgr = new recepti();
@@ -101,6 +106,7 @@ public class menu {
 		frame.getContentPane().add(btnRecepti);
 		
 		JButton btnIzradiRecept = new JButton("Izradi Recept");
+		btnIzradiRecept.setForeground(new Color(255, 0, 255));
 		btnIzradiRecept.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(Global.isLoggedIn) {
@@ -118,6 +124,7 @@ public class menu {
 		frame.getContentPane().add(btnIzradiRecept);
 		
 		JButton btnKomentar = new JButton("Komentiraj");
+		btnKomentar.setForeground(new Color(255, 0, 255));
 		btnKomentar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(Global.isLoggedIn) {
@@ -133,6 +140,7 @@ public class menu {
 		frame.getContentPane().add(btnKomentar);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setForeground(new Color(255, 0, 255));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"MapCat.png", "Seal.jpg", "alex.jpg", "bridge.jpg"}));
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

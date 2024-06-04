@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class prijave extends JFrame {
 	
@@ -47,18 +48,21 @@ public class prijave extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JLabel lblRegistracija = new JLabel("Nemas racun?");
+		lblRegistracija.setForeground(new Color(0, 0, 255));
 		lblRegistracija.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRegistracija.setFont(new Font("Tahoma", Font.PLAIN, 19));
 		lblRegistracija.setBounds(139, 11, 137, 31);
 		contentPane.add(lblRegistracija);
 		
 		JButton btnRegistracija = new JButton("Registriraj se!");
+		btnRegistracija.setForeground(new Color(0, 0, 255));
 		btnRegistracija.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				registracija dlgr = new registracija();
@@ -69,6 +73,7 @@ public class prijave extends JFrame {
 		contentPane.add(btnRegistracija);
 		
 		JButton btnLogin = new JButton("Vec imam racun");
+		btnLogin.setForeground(new Color(0, 0, 255));
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				login dlgl = new login();
@@ -80,6 +85,7 @@ public class prijave extends JFrame {
 		contentPane.add(btnLogin);
 		
 		JButton btnGostLogin = new JButton("Ulaz kao gost");
+		btnGostLogin.setForeground(new Color(0, 0, 255));
 		btnGostLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, "Ulogirani ste kao gost!\nNeke usluge neće biti dostupne dok se ne ulogirate!","Uspjeh!", JOptionPane.INFORMATION_MESSAGE);

@@ -20,6 +20,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
 
 public class izradiRecept extends JDialog {
 
@@ -110,11 +112,14 @@ public class izradiRecept extends JDialog {
 		setTitle("Izrada recepta");
 		setBounds(100, 100, 602, 442);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(204, 255, 204));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
 		JLabel lblNazivRecepta = new JLabel("Naziv recepta:");
+		lblNazivRecepta.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNazivRecepta.setForeground(new Color(51, 0, 204));
 		lblNazivRecepta.setBounds(10, 15, 81, 14);
 		contentPanel.add(lblNazivRecepta);
 		
@@ -124,10 +129,13 @@ public class izradiRecept extends JDialog {
 		textFieldNazivRecepta.setColumns(10);
 		
 		JLabel lblOpisRecepta = new JLabel("Opis recepta:");
+		lblOpisRecepta.setForeground(new Color(255, 102, 51));
 		lblOpisRecepta.setBounds(10, 56, 81, 21);
 		contentPanel.add(lblOpisRecepta);
 		
 		JLabel lblOznake = new JLabel("Oznake:");
+		lblOznake.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblOznake.setForeground(new Color(255, 204, 102));
 		lblOznake.setBounds(10, 181, 67, 21);
 		contentPanel.add(lblOznake);
 		
@@ -142,7 +150,9 @@ public class izradiRecept extends JDialog {
 		contentPanel.add(comboBoxSastojci);
 		
 		JLabel lblSastojci = new JLabel("Sastojci:");
-		lblSastojci.setBounds(10, 234, 46, 14);
+		lblSastojci.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblSastojci.setForeground(new Color(153, 0, 204));
+		lblSastojci.setBounds(10, 234, 67, 14);
 		contentPanel.add(lblSastojci);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -154,6 +164,8 @@ public class izradiRecept extends JDialog {
 		scrollPane.setViewportView(textAreaSastojci);
 		
 		JLabel lblNewLabel = new JLabel("Kolicina:");
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblNewLabel.setForeground(new Color(0, 102, 51));
 		lblNewLabel.setBounds(10, 270, 67, 14);
 		contentPanel.add(lblNewLabel);
 		
@@ -214,6 +226,7 @@ public class izradiRecept extends JDialog {
 		contentPanel.add(btnDodajSastojak);
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(204, 255, 204));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{

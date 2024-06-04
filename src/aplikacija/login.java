@@ -18,6 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JPasswordField;
+import java.awt.Color;
 
 public class login extends JDialog {
 
@@ -47,11 +48,13 @@ public class login extends JDialog {
 		setTitle("Login");
 		setBounds(100, 100, 410, 201);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(204, 255, 255));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
 		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setForeground(new Color(0, 0, 255));
 		lblEmail.setBounds(22, 26, 57, 29);
 		contentPanel.add(lblEmail);
 		
@@ -61,6 +64,7 @@ public class login extends JDialog {
 		textFieldEmail.setColumns(10);
 		
 		JLabel lblLozinka = new JLabel("Zaporka:");
+		lblLozinka.setForeground(new Color(0, 0, 255));
 		lblLozinka.setBounds(22, 72, 57, 29);
 		contentPanel.add(lblLozinka);
 		
@@ -70,10 +74,12 @@ public class login extends JDialog {
 		contentPanel.add(passwordField);
 		
 		JPanel buttonPane = new JPanel();
+		buttonPane.setBackground(new Color(204, 255, 255));
 		buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		getContentPane().add(buttonPane, BorderLayout.SOUTH);
 		{
 			JButton okButton = new JButton("OK");
+			okButton.setForeground(new Color(0, 0, 255));
 			okButton.addActionListener(new ActionListener()
 			{
 				@SuppressWarnings("unlikely-arg-type")
@@ -123,6 +129,7 @@ public class login extends JDialog {
 
 			
 			JButton cancelButton = new JButton("Cancel");
+			cancelButton.setForeground(new Color(0, 0, 255));
 			cancelButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					dispose();

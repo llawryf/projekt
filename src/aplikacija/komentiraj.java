@@ -24,6 +24,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.AbstractListModel;
+import java.awt.Color;
 
 public class komentiraj extends JDialog {
 
@@ -51,6 +52,7 @@ public class komentiraj extends JDialog {
 	public komentiraj() {
 		setBounds(100, 100, 612, 394);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(153, 0, 204));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
@@ -63,6 +65,7 @@ public class komentiraj extends JDialog {
 		scrollPane.setViewportView(textAreaPregled);
 		
 		JLabel lblNazivRecepta = new JLabel("Naziv recepta");
+		lblNazivRecepta.setForeground(new Color(255, 255, 255));
 		lblNazivRecepta.setBounds(322, 17, 86, 14);
 		contentPanel.add(lblNazivRecepta);
 		
@@ -72,6 +75,7 @@ public class komentiraj extends JDialog {
 		textFieldNazivRecepta.setColumns(10);
 		
 		JLabel lblOcjena = new JLabel("Ocjena");
+		lblOcjena.setForeground(new Color(255, 255, 255));
 		lblOcjena.setBounds(321, 87, 58, 14);
 		contentPanel.add(lblOcjena);
 		
@@ -108,6 +112,7 @@ public class komentiraj extends JDialog {
 	    group.add(rdbtnOcjena5);
 	   
 		JLabel lblSadrzajKomentara = new JLabel("Sadrzaj komentara:");
+		lblSadrzajKomentara.setForeground(new Color(255, 255, 255));
 		lblSadrzajKomentara.setBounds(323, 180, 131, 14);
 		contentPanel.add(lblSadrzajKomentara);
 		
@@ -116,14 +121,17 @@ public class komentiraj extends JDialog {
 		contentPanel.add(textAreaKomentar);
 		
 		JLabel lblRecepti = new JLabel("Recepti");
+		lblRecepti.setForeground(new Color(255, 255, 255));
 		lblRecepti.setBounds(10, 8, 46, 14);
 		contentPanel.add(lblRecepti);
 		{
 			JPanel buttonPane = new JPanel();
+			buttonPane.setBackground(new Color(153, 0, 204));
 			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 			getContentPane().add(buttonPane, BorderLayout.SOUTH);
 			{
 				JButton okButton = new JButton("Komentiraj");
+				okButton.setForeground(new Color(0, 0, 0));
 				okButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						String naziv = textFieldNazivRecepta.getText();
@@ -168,6 +176,7 @@ public class komentiraj extends JDialog {
 			}
 			{
 				JButton cancelButton = new JButton("Odustani");
+				cancelButton.setForeground(new Color(0, 0, 0));
 				cancelButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						dispose();

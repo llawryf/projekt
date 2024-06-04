@@ -14,6 +14,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.*;
+import java.awt.Color;
 
 public class registracija extends JDialog {
 
@@ -44,11 +45,14 @@ public class registracija extends JDialog {
 		setTitle("Registracija");
 		setBounds(100, 100, 410, 238);
 		getContentPane().setLayout(new BorderLayout());
+		contentPanel.setBackground(new Color(255, 255, 0));
+		contentPanel.setForeground(new Color(0, 153, 51));
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		contentPanel.setLayout(null);
 		
 		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setForeground(new Color(0, 153, 51));
 		lblEmail.setBounds(55, 11, 57, 29);
 		contentPanel.add(lblEmail);
 		
@@ -64,10 +68,12 @@ public class registracija extends JDialog {
 		contentPanel.add(textFieldLozinka);
 		
 		JLabel lblLozinka = new JLabel("Zaporka:");
+		lblLozinka.setForeground(new Color(0, 153, 51));
 		lblLozinka.setBounds(39, 94, 57, 29);
 		contentPanel.add(lblLozinka);
 		
 		JLabel lblKorisnicko = new JLabel("Korisnicko ime:");
+		lblKorisnicko.setForeground(new Color(0, 153, 51));
 		lblKorisnicko.setBounds(10, 54, 102, 29);
 		contentPanel.add(lblKorisnicko);
 		
@@ -77,6 +83,7 @@ public class registracija extends JDialog {
 		contentPanel.add(textFieldKIme);
 		
 		JLabel lblLozinkaPonovo = new JLabel("Ponovite lozinku:");
+		lblLozinkaPonovo.setForeground(new Color(0, 153, 51));
 		lblLozinkaPonovo.setBounds(10, 134, 102, 29);
 		contentPanel.add(lblLozinkaPonovo);
 		
@@ -86,10 +93,12 @@ public class registracija extends JDialog {
 		contentPanel.add(textFieldLozinkaPonovo);
 		
 		JPanel buttonPane = new JPanel();
+		buttonPane.setBackground(new Color(255, 255, 0));
 		buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		getContentPane().add(buttonPane, BorderLayout.SOUTH);
 		{
 			JButton okButton = new JButton("OK");
+			okButton.setForeground(new Color(0, 153, 51));
 			okButton.addActionListener(new ActionListener()
 			{
 				public void actionPerformed(ActionEvent e) {
@@ -130,6 +139,7 @@ public class registracija extends JDialog {
 
 			
 			JButton cancelButton = new JButton("Cancel");
+			cancelButton.setForeground(new Color(0, 153, 51));
 			cancelButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					dispose();
